@@ -1,7 +1,7 @@
 # Template file for 'qmc2'
 pkgname=qmc2
-version=0.64
-revision=1
+version=0.65
+revision=2
 wrksrc=${pkgname}
 build_style=gnu-makefile
 make_build_args="PREFIX=/usr DATADIR=/usr/share MAN_DIR=/usr/share/man TARGET=qmc2-mame"
@@ -9,14 +9,14 @@ make_install_args="${make_build_args}"
 hostmakedepends="rsync unzip"
 makedepends="SDL2-devel qt5-multimedia-devel qt5-script-devel qt5-svg-devel
  qt5-webkit-devel qt5-xmlpatterns-devel qt5-x11extras-devel"
-depends="rsync ${pkgname}-data mame qmc2-flyers qmc2-snapshots"
+depends="rsync ${pkgname}-data qmc2-flyers qmc2-snapshots"
 conf_files="/etc/${pkgname}/${pkgname}.ini"
 short_desc="Qt M.A.M.E. Catalog/Launcher II"
 maintainer="Jürgen Buchmüller <pullmoll@t-online.de>"
 license="GPL-2"
 homepage="http://qmc2.arcadehits.net/wordpress/"
 distfiles="${SOURCEFORGE_SITE}/${pkgname}/${pkgname}/${version}/${pkgname}-${version}.tar.bz2"
-checksum=16b9e6a68d4bfa3d640f3d159ddbec69294dd7582914e96b03654c54ce967be4
+checksum=85a3bf50b7902afc58306ea79fd4d5fde3ec6b36c3bded89f2f9ed876bc6a475
 
 nocross=yes
 nopie=yes
