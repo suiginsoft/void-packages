@@ -137,7 +137,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.367.27 nvidia-libs-367.27_1 ignore
+libnvidia-fatbinaryloader.so.367.35 nvidia-libs-367.35_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -465,10 +465,13 @@ libparted.so.2 libparted-3.1_1
 libparted-fs-resize.so.0 libparted-3.1_1
 libntfs-3g.so.87 ntfs-3g-2016.2.22_1
 libruby.so.2.3 ruby-2.3.0_1
-libxenctrl.so.4.6 xen-libs-4.6_1
-libxenguest.so.4.6 xen-libs-4.6_1
-libxlutil.so.4.6 xen-libs-4.6_1
-libxenlight.so.4.6 xen-libs-4.6_1
+libxenctrl.so.4.7 xen-libs-4.7_1
+libxenguest.so.4.7 xen-libs-4.7_1
+libxlutil.so.4.7 xen-libs-4.7_1
+libxenlight.so.4.7 xen-libs-4.7_1
+libxenevtchn.so.1 xen-libs-4.7_1
+libxengnttab.so.1 xen-libs-4.7_1
+libxentoollog.so.1 xen-libs-4.7_1
 libxenstore.so.3.0 xen-libs-4.2.2_2
 libvhd.so.1.0 xen-libs-4.2.2_2
 libxenstat.so.0 xen-libs-4.2.2_2
@@ -954,6 +957,7 @@ libLLVM-3.6.so libllvm3.6-3.6.0_1
 libLLVM-3.7.so libllvm3.7-3.7.0_1
 libLLVM-3.7.1.so libllvm3.7-3.7.1_1
 libLLVM-3.8.so libllvm3.8-3.8.0_1
+libLLVM-3.8.1.so libllvm3.8-3.8.1_1
 libisofs.so.6 libisofs-0.6.24_1
 libbfd-2.22.so binutils-2.22_1<2.23_1
 libopcodes-2.22.so binutils-2.22_1<2.23_1
@@ -1498,7 +1502,7 @@ libgwengui-cpp.so.0 gwenhywfar-4.10.0beta_1
 libgwengui-qt4.so.0 gwenhywfar-4.14.0_1
 libaqbanking.so.35 aqbanking-5.6.10_1
 libaqnone.so.35 aqbanking-5.6.10_1
-libaqhbci.so.22 aqbanking-5.0.25_1
+libaqhbci.so.23 aqbanking-5.6.11_1
 libaqofxconnect.so.7 aqbanking-5.0.25_1
 libaqebics.so.0 aqbanking-5.0.25_1
 libaqbankingpp.so.0 aqbanking-5.0.25_1
@@ -2555,3 +2559,5 @@ libply.so.2 plymouth-0.8.8_1
 libply-splash-core.so.2 plymouth-0.8.8_1
 libply-splash-graphics.so.2 plymouth-0.8.8_1
 libply-boot-client.so.2 plymouth-0.8.8_1
+libmilter.so.1.0.2 libmilter-1.0.2_1
+libopendkim.so.10 opendkim-2.10.3_1
