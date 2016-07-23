@@ -2125,7 +2125,7 @@ libskarnet.so.2.3 skalibs-2.3.7.0_1
 libtidy.so.5 libtidy5-5.1.25_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
 libQupZilla.so.2 qupzilla-2.0.0_1
-libinjeqt.so.0 injeqt-1.0.1_1
+libinjeqt.so.1 injeqt-1.1.0_1
 libgadu.so.3 libgadu-1.12.1_1
 libhiredis.so.0.13 hiredis-0.13.1_1
 libIL.so.1 devil-1.7.8_1
@@ -2449,7 +2449,6 @@ libobs-opengl.so.0 obs-0.14.1_2
 libzimg.so.2 zimg-2.0.4_1
 libvapoursynth.so vapoursynth-R32_2
 libvapoursynth-script.so.0 vapoursynth-R32_1 
-libmvtools.so vapoursynth-mvtools-12_1
 libtwolame.so.0 twolame-0.3.13_1
 libsignon-plugins.so.1 signond-8.58_1
 libsignon-qt5.so.1 signond-8.58_1
