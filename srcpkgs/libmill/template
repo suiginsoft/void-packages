@@ -1,6 +1,6 @@
 # Template file for 'libmill'
 pkgname=libmill
-version=1.13
+version=1.15
 revision=1
 build_style=gnu-configure
 hostmakedepends="automake libtool"
@@ -9,17 +9,12 @@ maintainer="Duncaen <duncaen@voidlinux.eu>"
 license="MIT"
 homepage="http://libmill.org/"
 distfiles="https://github.com/sustrik/libmill/archive/${version}.tar.gz"
-checksum=8b27c819d5d850d9f770ce28f4ddcd89895799f96ca9d1a6e0f8a6fecb79e257
+checksum=eb21060a82b517a671c8ea3afa8ccef932ec4ee40734fe4ba3421ab61c8851c4
 
 pre_configure() {
+	export CFLAGS="${CFLAGS/-D_FORTIFY_SOURCE=?/}"
 	autoreconf -fi
 }
-
-do_configure() {
-	export CFLAGS="${CFLAGS/-D_FORTIFY_SOURCE=?/}"
-	./configure ${configure_args}
-}
-
 post_install() {
 	vlicense COPYING
 }

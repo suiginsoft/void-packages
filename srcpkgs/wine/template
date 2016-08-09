@@ -1,6 +1,6 @@
 # Template file for 'wine'
 pkgname=wine
-version=1.9.14
+version=1.9.16
 revision=1
 build_style=gnu-configure
 configure_args="--without-gstreamer"
@@ -9,7 +9,7 @@ maintainer="Andrea Brancaleoni <miwaxe@gmail.com>"
 license="LGPL-2.1"
 homepage="http://www.winehq.org/"
 distfiles="https://dl.winehq.org/wine/source/${version%.*}/wine-${version}.tar.bz2"
-checksum=7fbe961caf171d95e1ae109e361f3a9e7cb9f6c9321775e961be2bc12892c52c
+checksum=e120d6673aada93935c6661b75c2edc835a45a8e658b80934c36434b56940f04
 
 lib32mode=full
 only_for_archs=i686
@@ -42,7 +42,7 @@ fi
 if [ ${build_option_staging} ]; then
 	makedepends+=" libva-devel gtk+3-devel"
 	distfiles+=" https://github.com/wine-compholio/${pkgname}-staging/archive/v${version}.tar.gz"
-	checksum+=" fd9e1d52d96bd405e2aa7d2d6537e31f86fee20102cb5a0ef8b452afd70667ed"
+	checksum+=" 24b0386b3bd04a2e48b5233487b2b3479d6e4042b44378ad3b9f1e04c5082a1d"
 fi
 
 post_extract() {

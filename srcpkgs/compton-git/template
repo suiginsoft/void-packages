@@ -1,6 +1,6 @@
 # Template file for 'compton-git'
 pkgname=compton-git
-version=20150922
+version=20160504
 revision=1
 build_style="gnu-makefile"
 hostmakedepends="pkg-config asciidoc pcre-devel git"
@@ -8,7 +8,7 @@ makedepends="dbus-devel libXcomposite-devel libXdamage-devel libXrandr-devel pcr
  libconfig-devel libdrm-devel MesaLib-devel libXinerama-devel"
 depends="desktop-file-utils"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
-homepage="https://github.com/chjj/compton"
+homepage="https://github.com/garnetius/compton"
 license="MIT"
 short_desc="A compositor for X (fork of xcompmgr-dana)"
 
@@ -16,9 +16,9 @@ provides="compton-${version}_${revision}"
 replaces="compton>=0"
 
 do_fetch() {
-	local url="git://github.com/chjj/compton.git"
+	local url="git://github.com/garnetius/compton.git"
 	msg_normal "Fetching source from $url ...\n"
 	git clone ${url} ${wrksrc}
 	cd ${wrksrc}
-	git reset --hard 2343e4bbd298b35ea5c190c52abd2b0cb9f79a18
+	git reset --hard e5074a5129a5e45b1839c3025f3358ac6903d611
 }
