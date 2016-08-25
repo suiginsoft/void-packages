@@ -1,11 +1,11 @@
 # Template file for 'python-efl'
 pkgname=python-efl
 version=1.17.0
-revision=1
+revision=2
 build_style=python-module
 python_versions="2.7 3.4"
 hostmakedepends="pkg-config python-devel python3.4-devel"
-makedepends="elementary-devel python-dbus-devel"
+makedepends="efl-devel python-dbus-devel"
 depends="python-dbus"
 pycompile_module="evas efl edje emotion ecore elementary e_dbus"
 homepage="http://enlightenment.org"
@@ -14,6 +14,8 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="LGPL-3"
 distfiles="http://download.enlightenment.org/rel/bindings/python/${pkgname}-${version}.tar.gz"
 checksum=7b97a146c188f89f54991471a66a754a8d64f571856c5e8aa0958ac3f2dbd015
+
+broken="https://build.voidlinux.eu/builders/x86_64-musl_builder/builds/13288/steps/shell_3/logs/stdio"
 
 python3.4-efl_package() {
 	depends="python3.4-dbus"

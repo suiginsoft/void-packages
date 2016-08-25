@@ -1,6 +1,6 @@
 # Template file for 'python-setuptools'
 pkgname=python-setuptools
-version=25.1.6
+version=26.0.0
 revision=1
 noarch=yes
 wrksrc="setuptools-${version}"
@@ -16,11 +16,12 @@ maintainer="Alessio Sergi <al3hex@gmail.com>"
 homepage="https://github.com/pypa/setuptools"
 license="MIT"
 distfiles="${PYPI_SITE}/s/setuptools/setuptools-${version}.tar.gz"
-checksum=281e7d21a3e23d0b7d19992ed52fda5b16a9837654de824ce22ae6b80f0e8f96
+checksum=45b502d7f396ac7b60df1f1d5bd01f928a6bd5979725fa2c653dd93feb6cd686
 alternatives="setuptools:easy_install:/usr/bin/easy_install2.7"
 
 post_install() {
 	rm -f ${DESTDIR}/usr/bin/easy_install-*
+	vlicense LICENSE
 }
 
 python3.4-setuptools_package() {
@@ -35,5 +36,6 @@ python3.4-setuptools_package() {
 	pkg_install() {
 		vmove usr/bin/easy_install3.4
 		vmove usr/lib/python3.4
+		vlicense LICENSE
 	}
 }

@@ -137,7 +137,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.367.35 nvidia-libs-367.35_1 ignore
+libnvidia-fatbinaryloader.so.367.44 nvidia-libs-367.44_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -907,7 +907,7 @@ libfluidsynth.so.1 libfluidsynth-1.1.5_1
 liblo.so.7 liblo-0.26_1
 libvamp-sdk.so.2 libvamp-plugin-sdk-2.2_1
 librubberband.so.2 librubberband-1.6.0_1
-libaubio.so.4 libaubio-0.4.1_1
+libaubio.so.5 libaubio-0.4.3_1
 libraptor2.so.0 libraptor-2.0.4_1
 liblrdf.so.2 liblrdf-0.4.0_1
 libserd-0.so.0 libserd-0.18.0_1
@@ -1472,7 +1472,7 @@ libefl.so.1 efl-1.12.0_1
 libecore_drm.so.1 efl-1.13.0_1
 libelua.so.1 efl-1.13.0_1
 libelocation.so.1 efl-1.13.0_1
-libelementary.so.1 elementary-1.8.0_1
+libelementary.so.1 efl-1.18.0_1
 libcjs.so.0 cjs-2.0.0_1
 libcjs-dbus.so.0 cjs-2.0.0_1
 libmuffin.so.0 muffin-2.0.5_1
@@ -1514,7 +1514,7 @@ libcheck.so.0 check-0.9.12_1
 liblxc.so.1 liblxc-1.0.0_1
 libtcmalloc.so.4 gperftools-2.1_1
 libaio.so.1 libaio-0.3.109_1
-libofx.so.6 libofx-0.9.9_2
+libofx.so.7 libofx-0.9.11_1
 libsigsegv.so.2 libsigsegv-2.10_2
 libfprint.so.0 libfprint-0.5.1_1
 libwx_baseu_xml-3.0.so.0 wxWidgets-3.0.0_1
@@ -2396,11 +2396,16 @@ libCbc.so.3 CoinMP-1.8.3_1
 libOsiCommonTests.so.1 CoinMP-1.8.3_1
 libCbcSolver.so.3 CoinMP-1.8.3_1
 libmwaw-0.3.so.3 libmwaw-0.3.7_1
-libixion-0.11.so.0 libixion-0.11.0_1
-liborcus-parser-0.11.so.0 liborcus-0.0.20160214_1
-liborcus-mso-0.11.so.0 liborcus-0.0.20160214_1
-liborcus-0.11.so.0 liborcus-0.0.20160214_1
-liborcus-spreadsheet-model-0.11.so.0 liborcus-0.0.20160214_1
+libixion-0.11.so.0 libixion11-0.11.1_1
+liborcus-parser-0.11.so.0 liborcus11-0.11.2_1
+liborcus-mso-0.11.so.0 liborcus11-0.11.2_1
+liborcus-0.11.so.0 liborcus11-0.11.2_1
+liborcus-spreadsheet-model-0.11.so.0 liborcus11-0.11.1_2
+libixion-0.12.so.0 libixion-0.12.0_1
+liborcus-parser-0.12.so.0 liborcus-0.12.0_1
+liborcus-mso-0.12.so.0 liborcus-0.12.0_1
+liborcus-0.12.so.0 liborcus-0.12.0_1
+liborcus-spreadsheet-model-0.12.so.0 liborcus-0.12.0_1
 libGeneratedSaxParser.so opencollada-0.0.20160223_1
 libMathMLSolver.so opencollada-0.0.20160223_1
 libOpenCOLLADABaseUtils.so opencollada-0.0.20160223_1
@@ -2415,6 +2420,7 @@ libfbembed.so.2 libfbclient-2.5.5.26952_1
 libfbembed.so.2.5 libfbclient-2.5.5.26952_1
 libib_util.so libfbclient-2.5.5.26952_1
 libgds.so.0 libfbclient-2.5.5.26952_1
+libipmiutil.so.1 ipmiutil-3.0.0_1
 libqxmpp.so.0 qxmpp-0.9.3_1
 libunwind.so.1 llvm-libunwind-3.8.0_1
 libc++abi.so.1 libcxxabi-3.8.0_1
@@ -2459,6 +2465,7 @@ libipmimonitoring.so.5 freeipmi-1.5.1_1
 libipmiconsole.so.2 freeipmi-1.5.1_1
 libfreeipmi.so.17 freeipmi-1.5.1_1
 libipmidetect.so.0 freeipmi-1.5.1_1
+libsmpeg-0.4.so.0 smpeg-0.4.5_3
 libsmpeg2-2.0.so.0 smpeg2-2.0.0_1
 libedac.so.1 libedac-0.18_1
 libxlsreader.so.1 libxls-1.4.0_1
@@ -2600,3 +2607,5 @@ libikvm-native.so mono-4.0.1.44_2
 libMonoPosixHelper.so mono-4.0.1.44_2
 libMonoSupportW.so mono-4.0.1.44_2
 libxcb-xrm.so.0 xcb-util-xrm-1.0_1
+libinchi.so.0 openbabel-2.3.2_1
+libopenbabel.so.4 openbabel-2.3.2_1

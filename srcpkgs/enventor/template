@@ -1,11 +1,11 @@
 # Template file for 'enventor'
 pkgname=enventor
 version=0.8.1
-revision=1
+revision=2
 lib32disabled=yes
 wrksrc="${pkgname}-${version}"
-hostmakedepends="pkg-config elementary-devel"
-makedepends="elementary-devel"
+hostmakedepends="pkg-config efl-devel"
+makedepends="efl-devel"
 depends="desktop-file-utils"
 build_style=gnu-configure
 configure_args="--disable-static"
@@ -15,3 +15,5 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="BSD"
 distfiles="http://download.enlightenment.org/rel/apps/${pkgname}/${pkgname}-${version}.tar.bz2"
 checksum=973147c485a6bf31914f2845579e05f9f58a7a305baf5d9cad8ae506c01b6c02
+
+broken="https://build.voidlinux.eu/builders/x86_64_builder/builds/25174/steps/shell_3/logs/stdio"
