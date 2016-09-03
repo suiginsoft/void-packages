@@ -1,7 +1,7 @@
 # Template file for 'python-PyQt5'
 pkgname=python-PyQt5
 version=5.6
-revision=1
+revision=2
 lib32disabled=yes
 wrksrc="PyQt5_gpl-${version}"
 hostmakedepends="pkg-config"
@@ -20,6 +20,8 @@ license="GPL-3"
 distfiles="${SOURCEFORGE_SITE}/pyqt/PyQt5_gpl-${version}.tar.gz"
 checksum=2e481a6c4c41b96ed3b33449e5f9599987c63a5c8db93313bd57a6acbf20f0e1
 alternatives="pyqt5:pyuic5:/usr/bin/pyuic5-2.7"
+# qt5-webkit currently can't be cross compiled
+nocross=yes
 
 _short_desc="${short_desc/Python2/Python3.4}"
 _pysitedir="usr/lib/python2.7/site-packages"
@@ -34,7 +36,8 @@ _do_pyqt5_build() {
 
 	python${pyver} configure.py --confirm-license --assume-shared ${tools} \
 		CC="${CC}" CFLAGS="${CFLAGS}" CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" \
-		LINK="${CXX}" LINK_SHLIB="${CXX}" LFLAGS="${LDFLAGS}" STRIP=""
+		LINK="${CXX}" LINK_SHLIB="${CXX}" LFLAGS="${LDFLAGS}" STRIP="" \
+		QMAKE_CXXFLAGS="${CXXFLAGS}" QMAKE_LFLAGS="${LDFLAGS}"
 	make ${makejobs}
 }
 pre_build() {

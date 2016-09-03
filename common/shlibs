@@ -57,7 +57,7 @@ libgcc_s.so.1 libgcc-4.4.0_1
 libgcj.so.15 libgcj-4.9.0_1
 libgcj-tools.so.15 libgcj-4.9.0_1
 libgij.so.15 libgcj-4.9.0_1
-libperl.so.5.22 perl-5.22.0_1
+libperl.so.5.24 perl-5.24.0_1
 libmp.so.3 gmp-5.0.1_1
 libgmp.so.10 gmp-5.0.1_1
 libgmpxx.so.4 gmpxx-6.0.0_2
@@ -961,6 +961,7 @@ libLLVM-3.7.so libllvm3.7-3.7.0_1
 libLLVM-3.7.1.so libllvm3.7-3.7.1_1
 libLLVM-3.8.so libllvm3.8-3.8.0_1
 libLLVM-3.8.1.so libllvm3.8-3.8.1_1
+libLLVM-3.9.so libllvm3.9-3.9.0_1
 libisofs.so.6 libisofs-0.6.24_1
 libbfd-2.22.so binutils-2.22_1<2.23_1
 libopcodes-2.22.so binutils-2.22_1<2.23_1
@@ -1972,10 +1973,10 @@ libfcitx-qt.so.0 libfcitx-qt-4.2.8_1
 liblastfm.so.1 liblastfm-1.0.9_1
 liblastfm_fingerprint.so.1 liblastfm-1.0.9_1
 libfcitx-qt5.so.0 libfcitx-qt5-0.1.3_1
-libdruntime-ldc-debug.so.66 ldc-runtime-0.15.1_1
-libdruntime-ldc.so.66 ldc-runtime-0.15.1_1
-libphobos2-ldc.so.66 ldc-runtime-0.15.1_1
-libphobos2-ldc-debug.so.66 ldc-runtime-0.15.1_1
+libdruntime-ldc-debug.so.70 ldc-runtime-1.0.0_1
+libdruntime-ldc.so.70 ldc-runtime-1.0.0_1
+libphobos2-ldc.so.70 ldc-runtime-1.0.0_1
+libphobos2-ldc-debug.so.70 ldc-runtime-1.0.0_1
 libmarblewidget.so.19 marble-4.14.3_2
 libastro.so.1 marble-4.14.3_2
 libparrot.so.6.9.0 parrot-6.9.0_1
@@ -2609,3 +2610,7 @@ libMonoSupportW.so mono-4.0.1.44_2
 libxcb-xrm.so.0 xcb-util-xrm-1.0_1
 libinchi.so.0 openbabel-2.3.2_1
 libopenbabel.so.4 openbabel-2.3.2_1
+libavogadro.so.1 avogadro-1.2.0_1
+libavogadro_OpenQube.so.0 avogadro-1.2.0_1
+libcourier-unicode.so.3 courier-unicode-1.4_1
+libzstd.so.1 zstd-1.0.0_1
