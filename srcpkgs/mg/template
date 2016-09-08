@@ -1,14 +1,15 @@
 # Template file for 'mg'
 pkgname=mg
-version=20160421
+version=20160905
 revision=1
+hostmakedepends="pkg-config"
 makedepends="libbsd-devel ncurses-devel"
 homepage="http://homepage.boetes.org/software/mg"
 short_desc="Micro GNU/emacs"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="Public Domain"
 distfiles="$homepage/mg-$version.tar.gz"
-checksum=b5dd8fbecb8a0ff0f32588c448f22f25fafcbfb297857e76d2883598a3e63a9a
+checksum=72c14476f98e341a01520f09ab8dfdd52663498d9dc14d0831c31697a08b8349
 
 CFLAGS="-DTCSASOFT=0"
 

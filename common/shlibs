@@ -1407,7 +1407,7 @@ libmcrypt.so.4 libmcrypt-2.5.8_1
 libgraphite2.so.3 graphite-1.2.3_1
 libFOX-1.6.so.0 fox-1.6.49_1
 libCHART-1.6.so.0 fox-1.6.49_1
-libchromaprint.so.0 chromaprint-0.7_1
+libchromaprint.so.1 chromaprint-1.3.2_1
 libedit.so.0 libedit-20130712.3.1_1
 libnet.so.1 libnet-1.1.6_1
 libthreadutil.so.6 libupnp-1.6.18_1
@@ -2151,7 +2151,7 @@ libgtkimageview.so.0 gtkimageview-1.6.4_1
 libgoocanvas.so.3 goocanvas1-1.0.0_1
 libplatform.so.2.0 platform-2.0.1_1
 libp8-platform.so.2.0 p8-platform-2.0.1_1
-libfacter.so.3.0.2 facter-3.0.2_1
+libfacter.so.3.4.1 facter-3.4.1_1
 libOIS-1.3.0.so ois-1.3_1
 libSILLY.so.1 silly-0.1.0_1
 libkeybinder-3.0.so.0 libkeybinder3-0.3.0_1
@@ -2351,7 +2351,7 @@ libmunge.so.2 munge-libs-0.5.11_1
 libmgba.so.0.4 libmgba-0.4.0_1
 libglabels-3.0.so.8 libglabels30-3.2.1_1
 libglbarcode-3.0.so.0 libglabels30-3.2.1_1
-libjim.so.0.76 jimtcl-0.76_2
+libjim.so.0.77 jimtcl-0.77_1
 libftdi1.so.2 libftdi1-1.2_1
 libax25.so.0 libax25-0.0.12rc4_1
 libax25io.so.0 libax25-0.0.12rc4_1
@@ -2360,7 +2360,7 @@ libges-1.0.so.0 gst1-editing-services-1.6.2_1
 libges-0.10.so.0 gst-editing-services-0.10.1_1
 libykneomgr.so.0 libykneomgr-0.1.8_1
 libopenshot-audio.so.3 libopenshot-audio-0.0.6_1
-libopenshot.so.8 libopenshot-0.1.1_1
+libopenshot.so.9 libopenshot-0.1.2_1
 libavresample.so.2 libavresample-2.8.5_3
 libpqxx-4.0.so libpqxx-4.0.1_1
 libndpi.so.1 ndpi-1.6_1
@@ -2614,3 +2614,4 @@ libavogadro.so.1 avogadro-1.2.0_1
 libavogadro_OpenQube.so.0 avogadro-1.2.0_1
 libcourier-unicode.so.3 courier-unicode-1.4_1
 libzstd.so.1 zstd-1.0.0_1
+libudis86.so.0 udis86-devel-1.7.2_3
