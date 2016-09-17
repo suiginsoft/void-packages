@@ -880,7 +880,7 @@ libunique-1.0.so.0 libunique1-1.1.6_1
 libxnoise.so.0 libxnoise-0.1.29_1
 libdiscid.so.0 libdiscid-0.2.2_1
 libmusicbrainz3.so.6 libmusicbrainz-3.0.3_1
-librhythmbox-core.so.9 librhythmbox-3.2.1_1
+librhythmbox-core.so.10 librhythmbox-3.4.1_1
 libdmapsharing-3.0.so.2 libdmapsharing-2.9.12_1
 libgexiv2.so.2 libgexiv2-0.6.1_1
 libraw.so.15 libraw-0.17.0_1
@@ -1562,9 +1562,10 @@ libdovecot-lda.so.0 dovecot-2.2.11_2
 libnetapi.so.0 samba-3.6.23_1
 libsmbsharemodes.so.0 samba-3.6.23_1
 libmysqld.so.18 libmariadbclient-5.5.36_1
-libwsutil.so.6 libwireshark-2.0.0_1
-libwiretap.so.5 libwireshark-2.0.0_1
-libwireshark.so.6 libwireshark-2.0.0_1
+libwsutil.so.7 libwireshark-2.2.0_1
+libwiretap.so.6 libwireshark-2.2.0_1
+libwireshark.so.8 libwireshark-2.2.0_1
+libwscodecs.so.1 libwireshark-2.2.0_1
 libfreerdp-core.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-channels.so.1.0 libfreerdp-1.0.2_2
 libfreerdp-rail.so.1.0 libfreerdp-1.0.2_2
@@ -1934,7 +1935,7 @@ libopenjpeg.so.5 libopenjpeg-1.5.2_1
 liboping.so.0 liboping-1.8.0_1
 libgksu2.so.0 libgksu-2.0.12_1
 libloudmouth-1.so.0 loudmouth-1.4.3_1
-libtorrent-rasterbar.so.8 libtorrent-rasterbar-1.0.6_1
+libtorrent-rasterbar.so.9 libtorrent-rasterbar-1.1.1_1
 libcapstone.so.3 capstone-3.0_1
 libhavege.so.1 libhaveged-1.9.1_1
 libnih.so.1 libnih-1.0.3_1
@@ -2615,3 +2616,6 @@ libavogadro_OpenQube.so.0 avogadro-1.2.0_1
 libcourier-unicode.so.3 courier-unicode-1.4_1
 libzstd.so.1 zstd-1.0.0_1
 libudis86.so.0 udis86-devel-1.7.2_3
+libsass.so.0 libsass-3.3.6_1
+libjbig.so.0 jbigkit-libs-2.1_2
+libjbig85.so.0 jbigkit-libs-2.1_2
