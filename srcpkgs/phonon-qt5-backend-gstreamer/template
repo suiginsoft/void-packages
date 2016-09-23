@@ -1,12 +1,12 @@
 # Template file for 'phonon-backend-gstreamer'
 pkgname=phonon-qt5-backend-gstreamer
 version=4.8.1
-revision=1
+revision=2
 wrksrc=${pkgname/-qt5/}-${version}
 lib32disabled=yes
 build_style=cmake
 configure_args="-DPHONON_BUILD_PHONON4QT5=ON"
-hostmakedepends="cmake automoc4 pkg-config"
+hostmakedepends="automoc4 pkg-config extra-cmake-modules"
 makedepends="MesaLib-devel qt5-devel phonon-qt5-devel gst-plugins-base1-devel gst-plugins-good1"
 depends="desktop-file-utils hicolor-icon-theme gst-plugins-good1 gst-libav"
 provides="phonon-qt5-backend-0_1"
