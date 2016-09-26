@@ -3,7 +3,7 @@ pkgname=grilo-plugins
 version=0.2.17
 revision=1
 build_style=gnu-configure
-configure_args="--disable-static --enable-shoutcast"
+configure_args="--disable-static --enable-shoutcast --enable-compile-warnings=no"
 hostmakedepends="pkg-config intltool itstool glib-devel gnome-doc-utils"
 # XXX missing plugins: fakemetadata.
 makedepends="grilo-devel gom-devel gupnp-av-devel json-glib-devel
