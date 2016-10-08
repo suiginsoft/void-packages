@@ -1,7 +1,7 @@
 # Template file for 'lemonbuddy'
 pkgname=lemonbuddy
 version=1.4.4
-revision=1
+revision=2
 _i3ipcpp_version=0.3.0
 _xpp_version=1.0.0
 build_style=cmake
@@ -31,6 +31,10 @@ checksum="
 
 build_options="alsa i3 mpd network"
 build_options_default="$build_options"
+
+case "$XBPS_TARGET_MACHINE" in
+	aarch64-musl) CXXFLAGS="-D_LINUX_IF_ETHER_H";;
+esac
 
 post_extract() {
 	[ -d ../i3ipcpp-${_i3ipcpp_version} ] && \

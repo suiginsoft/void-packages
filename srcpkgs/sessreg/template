@@ -21,6 +21,13 @@ case "$XBPS_TARGET_MACHINE" in
 		;;
 esac
 
+pre_configure() {
+	local _gccver=$(gcc --version | awk '/^gcc \(GCC\)/ { print $3 }')
+	if [ "${_gccver%%.*}" -gt 5 ]; then
+		sed -e 's/\$(CPP) \$(DEFS)/$(CPP) -P $(DEFS)/' -i man/Makefile.in
+	fi
+}
+
 post_install() {
 	vlicense COPYING
 }
