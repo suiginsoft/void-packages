@@ -3,7 +3,7 @@
 This article contains an exhaustive manual of how to create new source
 packages for XBPS, the `Void Linux` native packaging system.
 
-*Table of Contents*  
+*Table of Contents*
 
 * [Introduction](#Introduction)
 	* [Quality Requirements](#quality_requirements)
@@ -18,6 +18,7 @@ packages for XBPS, the `Void Linux` native packaging system.
 	* [Available variables](#available_vars)
 		* [Mandatory variables](#mandatory_vars)
 		* [Optional variables](#optional_vars)
+		* [About the depends variables](#explain_depends)
 	* [Repositories](#repositories)
 		* [Repositories defined by Branch](#repo_by_branch)
 		* [Package defined repositories](#pkg_defined_repo)
@@ -242,9 +243,9 @@ The optional 4th argument can be used to change the `file name`.
 	Installs `file` as a man page. `vman()` parses the name and
 	determines the section as well as localization. Example mappings:
 
-	`foo.1` -> `${DESTDIR}/usr/share/man/man1/foo.1`  
-	`foo.fr.1` -> `${DESTDIR}/usr/share/man/fr/man1/foo.1`  
-	`foo.1p` -> `${DESTDIR}/usr/share/man/man1/foo.1p`  
+	`foo.1` -> `${DESTDIR}/usr/share/man/man1/foo.1`
+	`foo.fr.1` -> `${DESTDIR}/usr/share/man/fr/man1/foo.1`
+	`foo.1p` -> `${DESTDIR}/usr/share/man/man1/foo.1p`
 
 - *vdoc()* `vdoc <file> [<name>]`
 
@@ -496,9 +497,6 @@ sonames in shared libraries.
 
 - `nocross` If set, cross compilation won't be allowed and will exit immediately.
 
-- `python_versions` A white space separated list of python versions which will
-be used to build that package. This is only used by the `python-module` build style.
-
 - `subpackages` A white space separated list of subpackages (matching `foo_package()`)
 to override the guessed list. Only use this if a specific order of subpackages is required,
 otherwise the default would work in most cases.
@@ -530,6 +528,30 @@ Example:
 - `alternatives` A white space separated list of supported alternatives the package provides.
 A list is composed of three components separated by a colon: group, symlink and target.
 i.e `alternatives="vi:/usr/bin/vi:/usr/bin/nvi ex:/usr/bin/ex:/usr/bin/nvi-ex"`.
+
+<a id="explain_depends"></a>
+#### About the many types of `depends` variable.
+
+So far we have listed three types of `depends`, there are `hostmakedepends`,
+`makedepends`, and plain old `depends`. To understand the difference between
+them, understand this: Void Linux cross compiles for many arches. Sometimes in
+a build process, certain programs must be run, for example `yacc`, or the
+compiler itself for a C program. Those programs get put in `hostmakedepends`.
+When the build runs, those will be installed on the host to help the build
+complete. Please note that anything that is a dependency of `base-devel` will
+already be installed, and should not be listed here.
+
+Then there are those things for which a package either links against or
+includes header files. These are `makedepends`, and regardless of the
+architecture of the build machine, the architecture of the target machine must
+be used. Typically the `makedepends` will be the only one of the three types of
+`depends` to include `-devel` packages, and typically only `-devel` packages.
+
+The final variable, `depends`, is for those things the package needs at
+runtime and without which is unusable, and that xbps can't auto-detect.
+These are not all the packages the package needs at runtime, but only those
+that are not linked against. This variable is most useful for non-compiled
+programs.
 
 <a id="repositories"></a>
 #### Repositories
@@ -632,11 +654,6 @@ Additional install arguments can be specified via `make_install_args`.
 - `perl-module` For packages that use the Perl
 [ExtUtils::MakeMaker](http://perldoc.perl.org/ExtUtils/MakeMaker.html) build method.
 
-- `python-module` For packages that use the Python module build method (setup.py).
-By default the module will be built for python2. The `python_versions` variable may
-be defined to set the allowed python versions to be built, i.e:
-`python_versions="2.7 3.3"`.
-
 - `waf3` For packages that use the Python3 `waf` build method with python3.
 
 - `waf` For packages that use the Python `waf` method with python2.
@@ -649,6 +666,15 @@ for the configure phase can be passed in via `configure_args`, make build argume
 be passed in via `make_build_args` and install arguments via `make_install_args`. The build
 target can be overridden via `make_build_target` and the install target
 via `make_install_target`.
+
+For packages that use the Python module build method (`setup.py`), you
+can choose one of the following:
+
+- `python-module` to build *both* Python 2.x and 3.x modules
+
+- `python2-module` to build Python 2.x only modules
+
+- `python3-module` to build Python 3.x only modules
 
 > If `build_style` is not set, the template must (at least) define a
 `do_install()` function and optionally more phases via `do_xxx()` functions.
@@ -1055,9 +1081,9 @@ be your guidance to decide whether or not to split off a `-doc` subpackage.
 <a id="pkgs_python"></a>
 ### Python packages
 
-Python packages should be built with the `python-module` build style, if possible. This sets
-some environment variables required to allow cross compilation. Support to allow building
-a python module for multiple versions from a single template is also possible.
+Python packages should be built with the `python{,2,3}-module` build style, if possible.
+This sets some environment variables required to allow cross compilation. Support to allow
+building a python module for multiple versions from a single template is also possible.
 
 To allow cross compilation, the `python-devel` package (for python 2.7) must be added
 to `hostmakedepends` and `makedepends`. If any other python version is also supported,
@@ -1065,15 +1091,6 @@ for example python3.4, those must also be added as host and target build depende
 
 The following variables may influence how the python packages are built and configured
 at post-install time:
-
-- `python_versions`: this variable expects the python versions supported by the module.
-By default it's always set to `2.7`. If a package for another python version is wanted
-you can set all acceptable versions, i.e `python_versions="2.7 3.4"` will build a package
-for `python (2.7)` and `python3.4`.
-
-- `pycompile_version`: this variable expects the python version that is used to
-byte-compile the python code (it generates the `.py[co]` files at post-install time).
-By default it's set to `2.7` for `python 2.x` packages.
 
 - `pycompile_module`: this variable expects the python modules that should be `byte-compiled`
 at post-install time. Python modules are those that are installed into the `site-packages`
@@ -1083,6 +1100,25 @@ by blanks, i.e `pycompile_module="foo blah"`.
 - `pycompile_dirs`: this variable expects the python directories that should be `byte-compiled`
 recursively by the target python version. This differs from `pycompile_module` in that any
 path may be specified, i.e `pycompile_dirs="usr/share/foo"`.
+
+- `pycompile_version`: this variable expects the python version that is used to
+byte-compile the python code (it generates the `.py[co]` files at post-install time).
+By default it's set to `2.7` for `python 2.x` packages.
+
+> NOTE: you need to define it *only* for non-Python modules.
+
+Also, a set of useful variables are defined to use in the templates:
+
+| Variable    | Value                            |
+|-------------|----------------------------------|
+| py2_ver     | 2.X                              |
+| py2_lib     | /usr/lib/python2.X               |
+| py2_sitelib | /usr/lib/python2.X/site-packages |
+| py2_inc     | /usr/include/python2.X           |
+| py3_ver     | 3.X                              |
+| py3_lib     | /usr/lib/python3.X               |
+| py3_sitelib | /usr/lib/python3.X/site-packages |
+| py3_inc     | /usr/include/python3.Xm          |
 
 > NOTE: it's expected that additional subpkgs must be generated to allow packaging for multiple
 python versions.
