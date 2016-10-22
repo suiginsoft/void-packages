@@ -807,6 +807,7 @@ liblua5.1.so.5.1 lua51-5.1.5_1
 liblua5.2.so.5.2 lua52-5.2.4_2
 liblua5.3.so.5.3 lua-5.3.1_2
 libburn.so.4 libburn-0.7.2_1
+libKF5Auth.so.5 kauth-5.26.0_1
 libgdkmm-2.4.so.1 gtkmm2-2.24.0_1
 libgtkmm-2.4.so.1 gtkmm2-2.24.0_1
 libseed-gtk3.so.0 libseed-3.0.0_1
@@ -2027,6 +2028,7 @@ libtoxav.so.0 toxcore-git-20150604_1
 libgom-1.0.so.0 gom-0.3.0_1
 libetpan.so.20 libetpan-1.7.2_1
 libxmp.so.4 libxmp-4.3.7_1
+libKF5ThreadWeaver.so.5 threadweaver-5.26.0_1
 libOpenImageIO_Util.so.1.7 openimageio-1.7.7_1
 libOpenImageIO.so.1.7 openimageio-1.7.7_1
 libOpenColorIO.so.1 opencolorio-1.0.8_1
@@ -2249,6 +2251,7 @@ libcalligrastageprivate.so.14 calligra-stage-2.9.7_1
 libfts.so.0 musl-fts-1.2_2
 libgavl.so.1 gavl-1.40_1
 libmxml.so.1 mxml-2.9_1
+libKF5Pty.so.5 kpty-5.26.0_1
 libdovecot-sieve.so.0 dovecot-plugin-pigeonhole-0.4.9_2
 libi3ipc-glib-1.0.so.0 i3ipc-glib-0.6.0_1
 libcsound64.so.6.0 csound-6.05.0_1
@@ -2556,10 +2559,10 @@ libTKXmlXCAF.so.10 oce-0.17.1_1
 libTKernel.so.10 oce-0.17.1_1
 libKF5CoreAddons.so.5 kcoreaddons-5.26.0_1
 librpmatch.so.0 musl-rpmatch-1.0_1
-libply.so.2 plymouth-0.8.8_1
-libply-splash-core.so.2 plymouth-0.8.8_1
-libply-splash-graphics.so.2 plymouth-0.8.8_1
-libply-boot-client.so.2 plymouth-0.8.8_1
+libply.so.4 plymouth-0.9.2_1
+libply-splash-core.so.4 plymouth-0.9.2_1
+libply-splash-graphics.so.4 plymouth-0.9.2_1
+libply-boot-client.so.4 plymouth-0.9.2_1
 libmilter.so.1.0.2 libmilter-1.0.2_1
 libopendkim.so.10 opendkim-2.10.3_1
 libtevent.so.0 tevent-0.9.28_1
