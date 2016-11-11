@@ -1,8 +1,8 @@
 # Template file for 'inxi'
 pkgname=inxi
-version=2.3.1
+version=2.3.4
 revision=1
-_gitrev=56d21a1c747802b55a7ab0e4f39404ec414502a3
+_gitrev=89e18d245bc34fc5be5f5baddac2ccd8106be050
 wrksrc=${pkgname}-${_gitrev}
 noarch="yes"
 depends="file glxinfo pciutils usbutils xdpyinfo xprop xrandr"
@@ -11,7 +11,7 @@ maintainer='Juan RP <xtraeme@voidlinux.eu>'
 license="GPL-3"
 homepage="https://github.com/smxi/inxi/"
 distfiles="https://github.com/smxi/inxi/archive/${_gitrev}.tar.gz>${pkgname}-${version}.tar.gz"
-checksum=8e5bd52c6ebeadd4b4bd196a96a8c8f22de237b8927fa5191c21baa6152c2eff
+checksum=75bbd7865c9cd438f13977fa91f1d2716bdc06e1231a341fd1da9e348398aada
 
 do_install() {
 	vbin inxi

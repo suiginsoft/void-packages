@@ -719,6 +719,7 @@ libvala-0.24.so.0 libvala-0.24.0_1
 libvala-0.26.so.0 libvala-0.26.2_1
 libvala-0.28.so.0 libvala-0.28.0_1
 libvala-0.30.so.0 libvala-0.30.0_1
+libvala-0.34.so.0 libvala-0.34.0_1
 libSDL_net-1.2.so.0 SDL_net-1.2.7_1
 libmodplug.so.1 libmodplug-0.8.8_1
 libfetch.so.2 libfetch-2.34_8
@@ -1134,7 +1135,7 @@ librygel-db-2.6.so.2 librygel-0.28.0_1
 libharfbuzz.so.0 libharfbuzz-0.9.4_1
 libharfbuzz-icu.so.0 libharfbuzz-0.9.19_1
 libosinfo-1.0.so.0 libosinfo-0.2.0_1
-libspice-client-gtk-3.0.so.4 spice-gtk-0.14_1
+libspice-client-gtk-3.0.so.5 spice-gtk-0.33_1
 libspice-client-glib-2.0.so.8 spice-gtk-0.14_1
 libspice-controller.so.0 spice-gtk-0.14_1
 libvirt-gconfig-1.0.so.0 libvirt-glib-0.1.2_1
@@ -1468,6 +1469,7 @@ libcjs-dbus.so.0 cjs-2.0.0_1
 libmuffin.so.0 muffin-2.0.5_1
 libcinnamon-desktop.so.4 cinnamon-desktop-2.0.4_1
 libcinnamon-control-center.so.1 libcinnamon-control-center-2.4.2_1
+libcvc.so.0 cinnamon-desktop-3.2.0_1
 libnemo-extension.so.1 libnemo-2.0.8_1
 libxshmfence.so.1 libxshmfence-1.1_1
 libgoffice-0.8.so.8 goffice0.8-0.8.13_1
@@ -1541,6 +1543,7 @@ libgfbgraph-0.2.so.0 gfbgraph-0.2.2_1
 libgtkhex-3.so.0 libgtkhex-3.10.0_1
 libgdlmm-3.0.so.2 libgdlmm-3.7.3_1
 libgnote-3.12.so.0 gnote-3.12.0_1
+libgnote-3.22.so.0 gnote-3.22.0_1
 libdmraid.so.1 dmraid-1.0.0.rc16.3_5
 libdovecot.so.0 dovecot-2.2.11_2
 libdovecot-login.so.0 dovecot-2.2.11_2
@@ -1897,7 +1900,7 @@ libQt5XcbQpa.so.5 qt5-5.6.0_1
 libQt5EglDeviceIntegration.so.5 qt5-5.6.0_1
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
-libx265.so.87 x265-2.0_1
+libx265.so.95 x265-2.1_1
 libQt5Xdg.so.2 libqtxdg-2.0.0_1
 libQt5XdgIconLoader.so.2 libqtxdg-2.0.0_1
 liblxqt-qt5.so.0 liblxqt-0.8.0_1
@@ -2069,6 +2072,7 @@ libqt5keychain.so.0 qtkeychain-qt5-0.4.0_1
 libphonon4qt5.so.4 phonon-qt5-4.8.3_1
 libphonon4qt5experimental.so.4 phonon-qt5-4.8.3_1
 libtelepathy-qt5.so.0 telepathy-qt5-0.9.5_1
+libtelepathy-qt5-service.so.0 telepathy-qt5-0.9.7_1
 libtelepathy-qt5-farstream.so.0 telepathy-qt5-farstream-0.9.5_1
 libKF5Attica.so.5 attica-qt5-5.6.0_1
 libechonest5.so.2.3 libechonest-qt5-2.3.0_1
@@ -2116,7 +2120,7 @@ libgegl-0.3.so.0 gegl3-0.3.0_1
 libgegl-npd-0.3.so gegl3-0.3.0_1
 libgegl-sc-0.3.so gegl3-0.3.0_1
 libprocps.so.6 procps-ng-3.3.12_1
-libskarnet.so.2.3 skalibs-2.3.7.0_1
+libskarnet.so.2.4 skalibs-2.4.0.0_1
 libtidy.so.5 libtidy5-5.1.25_1
 libSDL2_gfx-1.0.so.0 SDL2_gfx-1.0.1_1
 libQupZilla.so.2 qupzilla-2.0.0_1
@@ -2645,3 +2649,11 @@ libpayeeidentifier_nationalAccount.so.4 kmymoney-4.8.0_1
 libpayeeidentifier_iban_bic.so.4 kmymoney-4.8.0_1
 libkmm_payeeidentifier.so kmymoney-4.8.0_1
 libbotan-1.10.so.1 botan-1.10.13_1
+libswipl.so.7.2 swi-prolog-7.2.3_5
+libpcre2-16.so.0 libpcre2-10.22_1
+libpcre2-32.so.0 libpcre2-10.22_1
+libpcre2-8.so.0 libpcre2-10.22_1
+libpcre2-posix.so.1 libpcre2-10.22_1
+libgnome-autoar-0.so.0 gnome-autoar-0.1.1_1
+libgnome-autoar-gtk-0.so.0 gnome-autoar-0.1.1_1
+libxapp.so.1 xapps-1.0.2_1

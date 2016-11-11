@@ -1,6 +1,6 @@
 # Template file for 'skalibs'
 pkgname=skalibs
-version=2.3.10.0
+version=2.4.0.1
 revision=1
 nocross=yes
 build_style=gnu-configure
@@ -11,7 +11,7 @@ maintainer="bougyman <bougyman@voidlinux.eu>"
 license="ISC"
 homepage="http://skarnet.org/software/skalibs/"
 distfiles="http://skarnet.org/software/${pkgname}/${pkgname}-${version}.tar.gz"
-checksum=e4d5147941055b2a367794666f773a4b216c3ae83c015a5fcf2cd0498470ea44
+checksum=70dc9f8635d6efdb1d1c7c2274a5305dcc6a346e4227eeb79df7d2d376dbd2ed
 
 CFLAGS="-D_DEFAULT_SOURCE"
 

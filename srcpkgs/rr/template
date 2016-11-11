@@ -1,18 +1,18 @@
 # Template file for 'rr'
 pkgname=rr
-version=4.3.0
+version=4.4.0
 revision=1
 build_style=cmake
 cmake_args="-DCMAKE_SYSTEM_PROCESSOR=${XBPS_TARGET_MACHINE}"
 only_for_archs="i686 x86_64"
-hostmakedepends="cmake pkg-config python"
+hostmakedepends="pkg-config python"
 makedepends="python-pexpect zlib-devel"
 short_desc="Nondeterministic debugger"
 maintainer="Spencer Hill <spencernh77@gmail.com>"
 license="MIT, BSD"
 homepage="http://rr-project.org/"
 distfiles="https://github.com/mozilla/${pkgname}/archive/${version}.tar.gz"
-checksum=46933cdd706d71c3de05b55937c85ee055c08e67e5c1e6a1278c7feb187ca37a
+checksum=b2b24a3f67df47576126421746cd2942a458d2825faa76e8bb3ca43edffa03d3
 nopie=yes
 
 case "$XBPS_MACHINE" in
