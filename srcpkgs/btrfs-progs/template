@@ -1,6 +1,6 @@
 # Template file for 'btrfs-progs'
 pkgname=btrfs-progs
-version=4.8.2
+version=4.8.4
 revision=1
 wrksrc=${pkgname}-v${version}
 build_style=gnu-configure
@@ -12,7 +12,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 homepage="http://btrfs.wiki.kernel.org/"
 distfiles="${KERNEL_SITE}/kernel/people/kdave/${pkgname}/${pkgname}-v${version}.tar.xz"
-checksum=81c023f519c8565b23eddb90e6d0eec2be63ee52e440708e418539dbaa635c5f
+checksum=bf26ead666c337a62a74bc9ec7f8dd9ee200e60e5fe5289967d53328eff261c5
 
 pre_configure() {
 	NOCONFIGURE=1 ./autogen.sh

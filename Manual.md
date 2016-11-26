@@ -795,16 +795,16 @@ The supported build options for a source package can be shown with `xbps-src`:
 
 Build options can be enabled with the `-o` flag of `xbps-src`:
 
-    $ ./xbps-src -o option,option1 foo
+    $ ./xbps-src -o option,option1 <cmd> foo
 
 Build options can be disabled by prefixing them with `~`:
 
-    $ ./xbps-src -o ~option,~option1 foo
+    $ ./xbps-src -o ~option,~option1 <cmd> foo
 
 Both ways can be used together to enable and/or disable multiple options
 at the same time with `xbps-src`:
 
-    $ ./xbps-src -o option,~option1,~option2 foo
+    $ ./xbps-src -o option,~option1,~option2 <cmd> foo
 
 The build options can also be shown for binary packages via `xbps-query(8)`:
 
@@ -1106,6 +1106,11 @@ byte-compile the python code (it generates the `.py[co]` files at post-install t
 By default it's set to `2.7` for `python 2.x` packages.
 
 > NOTE: you need to define it *only* for non-Python modules.
+
+- `python_version`: this variable expects the supported Python major version.
+By default it's set to `2`. This variable is needed for multi-language
+applications (e.g., the application is written in C while the command is
+written in Python) or just single Python file ones that live in `/usr/bin`.
 
 Also, a set of useful variables are defined to use in the templates:
 
