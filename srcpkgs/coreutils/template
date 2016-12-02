@@ -1,6 +1,6 @@
 # Template file for 'coreutils'
 pkgname=coreutils
-version=8.25
+version=8.26
 revision=1
 bootstrap=yes
 makedepends="gmp-devel acl-devel libcap-devel"
@@ -10,7 +10,9 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gnu.org/software/coreutils"
 license="GPL-3"
 distfiles="${GNU_SITE}/$pkgname/$pkgname-$version.tar.xz"
-checksum=31e67c057a5b32a582f26408c789e11c2e8d676593324849dcf5779296cdce87
+checksum=155e94d748f8e2bc327c66e0cbebdb8d6ab265d2f37c3c928f7bf6c3beba9a8e
+
+nocross="https://build.voidlinux.eu/builders/armv6l_builder/builds/29504/steps/shell_3/logs/stdio"
 
 if [ "$CHROOT_READY" ]; then
 	hostmakedepends="perl"

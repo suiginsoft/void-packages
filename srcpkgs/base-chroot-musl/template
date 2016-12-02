@@ -1,7 +1,7 @@
 # Template file for 'base-chroot-musl'
 pkgname=base-chroot-musl
-version=0.18
-revision=1
+version=0.19
+revision=2
 bootstrap=yes
 build_style=meta
 bootstrap=yes
@@ -16,7 +16,7 @@ only_for_archs="i686-musl x86_64-musl armv6l-musl armv7l-musl aarch64-musl mips-
 
 depends="
  base-files musl-devel musl-legacy-compat
- gcc gcc-c++ patch chroot-bash chroot-grep coreutils findutils
+ gcc patch chroot-bash chroot-grep coreutils findutils
  gettext chroot-texinfo sed chroot-gawk diffutils
  make gzip file tar chroot-util-linux chroot-distcc
  chroot-git ccache xbps xz which"

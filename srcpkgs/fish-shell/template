@@ -1,12 +1,12 @@
 # Template file for 'fish-shell'
 pkgname=fish-shell
 version=2.4.0
-revision=1
+revision=2
 build_style=gnu-configure
 configure_args="ac_cv_file__proc_self_stat=yes"
 hostmakedepends="automake libtool"
 makedepends="ncurses-devel"
-depends="bc"
+depends="bc groff"
 register_shell="/usr/bin/fish"
 conf_files="/etc/fish/config.fish"
 wrksrc="fish-${version}"
