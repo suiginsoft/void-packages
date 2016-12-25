@@ -56,7 +56,7 @@ libitm.so.1 libitm-4.7.3_1
 libgcj_bc.so.1 libgcj-4.7.3_1
 liblto_plugin.so.0 gcc-4.7.3_1
 libgcc_s.so.1 libgcc-4.4.0_1
-libgcj.so.17 libgcj-6.2.0_1
+libgcj.so.17 libgcj-6.3.0_1
 libgcj-tools.so.17 libgcj-6.2.1_1
 libgij.so.17 libgcj-6.2.1_1
 libgo.so.9 libgo-6.2.1_1
@@ -142,7 +142,7 @@ libnvidia-gtk2.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-gtk3.so.346.47 nvidia-gtklibs-346.47_1 ignore
 libnvidia-glcore.so.346.47 nvidia340-libs-340.46_1 ignore
 libnvidia-glsi.so.346.72 nvidia-libs-346.72_1 ignore
-libnvidia-fatbinaryloader.so.375.20 nvidia-libs-375.20_1 ignore
+libnvidia-fatbinaryloader.so.375.26 nvidia-libs-375.26_1 ignore
 libglapi.so.0 libglapi-7.11_1
 libgbm.so.1 libgbm-9.0_1
 librsvg-2.so.2 librsvg-2.26.0_1
@@ -356,11 +356,11 @@ liblcms.so.1 lcms-1.18_1
 libgd.so.3 gd-2.1.0_1
 libcroco-0.6.so.3 libcroco-0.6.2_1
 libgsf-1.so.114 libgsf-1.14.11_1
-libMagickCore-6.Q16.so.2 libmagick-6.8.8.4_1
-libMagickWand-6.Q16.so.2 libmagick-6.8.8.4_1
-libMagick++-6.Q16.so.6 libmagick-6.9.0.5_1
+libMagickCore-6.Q16.so.3 libmagick-6.9.6.8_1
+libMagickWand-6.Q16.so.3 libmagick-6.9.6.8_1
+libMagick++-6.Q16.so.7 libmagick-6.9.6.8_1
 libltdl.so.7 libltdl-2.2.6_1
-libpoppler.so.65 poppler-0.49.0_1
+libpoppler.so.66 poppler-0.50.0_1
 libpoppler-glib.so.8 poppler-glib-0.18.2_1
 libpoppler-cpp.so.0 poppler-cpp-0.18.2_1
 libpoppler-qt4.so.4 poppler-qt4-0.22.3_1
@@ -484,6 +484,7 @@ libxenstat.so.0 xen-libs-4.2.2_2
 libblktapctl.so.1.0 xen-libs-4.2.2_2
 libblktap.so.3.0 xen-libs-4.2.2_2
 libfsimage.so.1.0 xen-libs-4.2.2_2
+libKF5SyntaxHighlighting.so.5 syntax-highlighting-5.29.0_1
 libbabl-0.1.so.0 babl-0.1.10_1
 libbamf3.so.2 bamf-0.5.1_1
 libgegl-0.2.so.0 gegl-0.2.0_1
@@ -1427,7 +1428,7 @@ libgfchangelog.so.0 libglusterfs-3.8.0_1
 libgfrpc.so.0 libglusterfs-3.8.0_1
 libgfxdr.so.0 libglusterfs-3.8.0_1
 libgfapi.so.0 libglusterfs-3.8.0_1
-libsnapper.so.3 libsnapper-0.2.6_1
+libsnapper.so.4 libsnapper-0.4.1_1
 libtsm.so.3 libtsm-3_1
 libxine.so.2 libxine-1.2.4_1
 libjbig2dec.so.0 libjbig2dec-0.11_1
@@ -1490,7 +1491,7 @@ libatomic_ops.so.1 libatomic_ops-7.4.2_1
 libbfb.so.1 libbfb-0.24.2_1
 libmulticobex.so.1 libmulticobex-0.24_1
 libobexftp.so.0 libobexftp-0.24_1
-libhunspell-1.5.so.0 libhunspell-1.5.0_1
+libhunspell-1.6.so.0 libhunspell-1.6.0_1
 libstdlog.so.0 liblogging-1.0.0_1
 liblogging-stdlog.so.0 liblogging-1.0.2_1
 libdom.so.0 libdom-0.0.1_1
@@ -1615,7 +1616,7 @@ libplibnet.so.1 plib-1.8.5_1
 libplibpsl.so.1 plib-1.8.5_1
 libplibpw.so.1 plib-1.8.5_1
 libode.so.6 libode-0.14_1
-libosmocore.so.6 libosmocore-0.8.0_1
+libosmocore.so.7 libosmocore-0.9.4_1
 libosmovty.so.3 libosmocore-0.9.0_1
 libosmosim.so.0 libosmocore-0.8.0_1
 libosmocodec.so.0 libosmocore-0.6.6_1
@@ -1656,12 +1657,12 @@ libmitlm.so.0 mitlm-0.4.1_1
 libextractor.so.3 libextractor-1.1_1
 libextractor_common.so.1 libextractor-1.1_1
 libpano13.so.3 libpano13-2.9.19_1
-libubsan.so.0 libsanitizer-4.9.0_1
-libtsan.so.0 libsanitizer-4.9.0_1
-libasan.so.3 libsanitizer-6.2.0_1
-liblsan.so.0 libsanitizer-4.9.0_1
-libcilkrts.so.5 libcilkrts-4.9.0_1
-libvtv.so.0 libvtv-4.9.0_1
+libubsan.so.0 libsanitizer-6.3.0_1
+libtsan.so.0 libsanitizer-6.3.0_1
+libasan.so.3 libsanitizer-6.3.0_1
+liblsan.so.0 libsanitizer-6.3.0_1
+libcilkrts.so.5 libcilkrts-6.3.0_1
+libvtv.so.0 libvtv-6.3.0_1
 libatomic.so.1 libatomic-4.9.0_1
 libpcsclite.so.1 libpcsclite-1.8.11_1
 libpcscspy.so.0 libpcsclite-1.8.11_1
@@ -1846,6 +1847,7 @@ libexttextcat-2.0.so.0 libexttextcat-3.4.3_1
 libledger.so.3 libledger-3.1_1
 libksba.so.8 libksba-1.3.1_1
 libgltf-0.0.so.0 libgltf-0.0.2_1
+libgltf-0.1.so.1 libgltf-0.1.0_1
 libabw-0.1.so.1 libabw-0.1.0_1
 libcmis-0.5.so.5 libcmis-0.5.0_1
 libcmis-c-0.5.so.5 libcmis-0.5.0_1
@@ -1857,6 +1859,11 @@ libQt53DRender.so.5 qt5-3d-5.6.0_1
 libQt53DQuick.so.5 qt5-3d-5.6.0_1
 libQt53DQuickInput.so.5 qt5-3d-5.6.0_1
 libQt53DQuickRender.so.5 qt5-3d-5.6.0_1
+libQt53DExtras.so.5 qt5-3d-5.6.0_1
+libQt53DQuickExtras.so.5 qt5-3d-5.6.0_1
+libQt5Charts.so.5 qt5-charts-5.7.1_1
+libQt5DataVisualization.so.5 qt5-datavis3d-5.7.1_1
+libQt5Gamepad.so.5 qt5-gamepad-5.7.1_1
 libQt5Nfc.so.5 qt5-connectivity-5.6.0_1
 libQt5WebView.so.5 qt5-webview-5.6.0_1
 libQt5Qml.so.5 qt5-declarative-5.6.0_1
@@ -1864,8 +1871,8 @@ libQt5Quick.so.5 qt5-declarative-5.6.0_1
 libQt5QuickTest.so.5 qt5-declarative-5.6.0_1
 libQt5QuickWidgets.so.5 qt5-declarative-5.6.0_1
 libQt5QuickParticles.so.5 qt5-declarative-5.6.0_1
-libQt5Enginio.so.1 qt5-engineio-5.6.0_1
-libEnginio.so.1 qt5-enginio-5.6.0_1
+libQt5QuickControls2.so.5 qt5-quickcontrols2-5.7.1_1
+libQt5QuickTemplates2.so.5 qt5-quickcontrols2-5.7.1_1
 libQt5Positioning.so.5 qt5-location-5.6.0_1
 libQt5Location.so.5 qt5-location-5.6.0_1
 libQt5Multimedia.so.5 qt5-multimedia-5.6.0_1
@@ -1873,6 +1880,7 @@ libQt5MultimediaQuick_p.so.5 qt5-multimedia-5.6.0_1
 libQt5MultimediaWidgets.so.5 qt5-multimedia-5.6.0_1
 libqgsttools_p.so.1 qt5-multimedia-5.6.0_1
 libQt5LabsTemplates.so.5 qt5-quickcontrols2-5.6.0_1
+libQt5Scxml.so.5 qt5-scxml-5.7.1_1
 libQt5Script.so.5 qt5-script-5.6.0_1
 libQt5ScriptTools.so.5 qt5-script-5.6.0_1
 libQt5Sensors.so.5 qt5-sensors-5.6.0_1
@@ -1884,6 +1892,7 @@ libQt5Help.so.5 qt5-tools-5.6.0_1
 libQt5Designer.so.5 qt5-tools-5.6.0_1
 libQt5DesignerComponents.so.5 qt5-tools-5.6.0_1
 libQt5WaylandClient.so.5 qt5-wayland-5.6.0_1
+libQt5WaylandCompositor.so.5 qt5-wayland-5.6.0_1
 libQt5WebChannel.so.5 qt5-webchannel-5.6.0_1
 libQt5WebEngineCore.so.5 qt5-webengine-5.6.0_1
 libQt5WebEngine.so.5 qt5-webengine-5.6.0_1
@@ -1904,6 +1913,7 @@ libQt5OpenGL.so.5 qt5-5.6.0_1
 libQt5PrintSupport.so.5 qt5-5.6.0_1
 libQt5XcbQpa.so.5 qt5-5.6.0_1
 libQt5EglDeviceIntegration.so.5 qt5-5.6.0_1
+libQt5EglFsKmsSupport.so.5 qt5-5.7.1_1
 libQt5WebKit.so.5 qt5-webkit-5.6.0_1
 libQt5WebKitWidgets.so.5 qt5-webkit-5.6.0_1
 libx265.so.95 x265-2.1_1
@@ -1926,11 +1936,12 @@ libstfl.so.0 stfl-0.23_1
 libenventor.so.0 enventor-0.4.1_1
 libCDApplet.so cairo-dock-plugins-3.4.0_1
 libhydrogen-core-0.9.6.1.so hydrogen-0.9.6.1_1
-libldns.so.1 libldns-1.6.17_1
+libldns.so.2 libldns-1.7.0_1
 libopenjpeg.so.5 libopenjpeg-1.5.2_1
 liboping.so.0 liboping-1.8.0_1
 libgksu2.so.0 libgksu-2.0.12_1
 libloudmouth-1.so.0 loudmouth-1.4.3_1
+libtorrent-rasterbar.so.8 libtorrent-rasterbar-1.0-1.0.10_1
 libtorrent-rasterbar.so.9 libtorrent-rasterbar-1.1.1_1
 libcapstone.so.3 capstone-3.0_1
 libhavege.so.1 libhaveged-1.9.1_1
@@ -2065,11 +2076,11 @@ libfuzzy.so.2 libfuzzy-2.12_1
 libSDL_gfx.so.15 SDL_gfx-2.0.25_2
 libgdkglextmm-x11-1.2.so.0 gtkglextmm-1.2.0_1
 libgtkglextmm-x11-1.2.so.0 gtkglextmm-1.2.0_1
-libsfml-network.so.2.3 SFML-2.3_1
-libsfml-system.so.2.3 SFML-2.3_1
-libsfml-window.so.2.3 SFML-2.3_1
-libsfml-audio.so.2.3 SFML-2.3_1
-libsfml-graphics.so.2.3 SFML-2.3_1
+libsfml-network.so.2.4 SFML-2.4.1_1
+libsfml-system.so.2.4 SFML-2.4.1_1
+libsfml-window.so.2.4 SFML-2.4.1_1
+libsfml-audio.so.2.4 SFML-2.4.1_1
+libsfml-graphics.so.2.4 SFML-2.4.1_1
 libclamav.so.7 clamav-0.98.6_1
 libclamunrar.so.7 clamav-0.98.6_1
 libclamunrar_iface.so.7 clamav-0.98.6_1
@@ -2438,6 +2449,10 @@ libdcadec.so.0 dcadec-0.2.0_1
 libcmark.so.0 cmark-0.24.1_1
 libspotify.so.12 libspotify-12.1.51_1
 libwiredtiger-2.8.0.so wiredtiger-2.8.0_1
+libwiredtiger_lz4.so wiredtiger-2.9.0_1
+libwiredtiger_snappy.so wiredtiger-2.9.0_1
+libwiredtiger_zlib.so wiredtiger-2.9.0_1
+libwiredtiger-2.9.1.so wiredtiger-2.9.1_1
 libvidstab.so.0.9 libvidstab-0.98b_1
 libxdo.so.3 xdotool-3.20150503.1_1
 libabigail.so.0 libabigail-1.0.rc3_1
@@ -2702,7 +2717,7 @@ libkmm_mymoney.so.4 kmymoney-4.8.0_1
 libpayeeidentifier_nationalAccount.so.4 kmymoney-4.8.0_1
 libpayeeidentifier_iban_bic.so.4 kmymoney-4.8.0_1
 libkmm_payeeidentifier.so kmymoney-4.8.0_1
-libbotan-1.10.so.1 botan-1.10.13_1
+libbotan-1.11.so.34 botan-1.11.34_1
 libswipl.so.7.2 swi-prolog-7.2.3_5
 libpcre2-16.so.0 libpcre2-10.22_1
 libpcre2-32.so.0 libpcre2-10.22_1
@@ -2714,3 +2729,35 @@ libgnome-autoar-gtk-0.so.0 gnome-autoar-0.1.1_1
 libxapp.so.1 xapps-1.0.2_1
 libite.so.3 libite-1.8.2_1
 liblog4cplus-1.2.so.5 log4cplus-1.2.0_1
+libpng12.so.0 libpng12-1.2.56_2
+libpng.so.3 libpng12-1.2.56_2
+libcapnp-0.5.3.so capnproto-0.5.3_1
+libcapnp-rpc-0.5.3.so capnproto-0.5.3_1
+libcapnpc-0.5.3.so capnproto-0.5.3_1
+libkj-0.5.3.so capnproto-0.5.3_1
+libkj-async-0.5.3.so capnproto-0.5.3_1
+libkea-log.so.2 libkea-1.1.0_1
+libkea-util.so.2 libkea-1.1.0_1
+libkea-exceptions.so.0 libkea-1.1.0_1
+libkea-dhcpsrv.so.6 libkea-1.1.0_1
+libkea-eval.so.4 libkea-1.1.0_1
+libkea-dhcp_ddns.so.1 libkea-1.1.0_1
+libkea-stats.so.1 libkea-1.1.0_1
+libkea-cfgclient.so.2 libkea-1.1.0_1
+libkea-dhcp++.so.4 libkea-1.1.0_1
+libkea-asiolink.so.3 libkea-1.1.0_1
+libkea-cc.so.1 libkea-1.1.0_1
+libkea-cryptolink.so.1 libkea-1.1.0_1
+libkea-hooks.so.2 libkea-1.1.0_1
+libkea-asiodns.so.0 libkea-1.1.0_1
+libkea-dns++.so.1 libkea-1.1.0_1
+libkea-util-io.so.0 libkea-1.1.0_1
+libkea-threads.so.1 libkea-1.1.0_1
+libytnef.so.0 ytnef-1.8_1
+libpisock.so.9 pilot-link-0.12.5_1
+libpisync.so.1 pilot-link-0.12.5_1
+libpitcl.so.0 pilot-link-0.12.5_1
+libiscsi.so.8 libiscsi-1.18.0_1
+libgme.so.0 libgme-0.6.1_1
+libczmq.so.4 czmq-4.0.1_1
+liblz.so.1 lzlib-1.8_1

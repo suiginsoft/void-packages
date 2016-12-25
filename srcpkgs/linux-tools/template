@@ -1,20 +1,20 @@
 # Template file for 'linux-tools'
 pkgname=linux-tools
-version=4.1
-revision=4
+version=4.9
+revision=2
 build_style=meta
 wrksrc="linux-${version}"
 short_desc="Linux kernel tools meta-pkg"
 hostmakedepends="flex perl asciidoc xmlto python automake libtool"
 makedepends="pciutils-devel python-devel libglib-devel libsysfs-devel
  elfutils-devel libunwind-devel binutils-devel zlib-devel slang-devel
- eudev-libudev-devel liblzma-devel"
+ eudev-libudev-devel liblzma-devel libressl-devel"
 depends="cpupower-${version}_${revision} perf-${version}_${revision} usbip-${version}_${revision}"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 homepage="http://www.kernel.org"
 distfiles="http://ftp.kernel.org/pub/linux/kernel/v4.x/linux-${version}.tar.xz"
-checksum=caf51f085aac1e1cea4d00dbbf3093ead07b551fc07b31b2a989c05f8ea72d9f
+checksum=029098dcffab74875e086ae970e3828456838da6e0ba22ce3f64ef764f3d7f1a
 
 subpackages="cpupower libcpupower libcpupower-devel libusbip libusbip-devel usbip perf freefall"
 
@@ -30,12 +30,12 @@ nocross=yes
 
 post_extract() {
 	sed -i 's/\$(LIBS)/& $(LDFLAGS)/' tools/power/cpupower/bench/Makefile
+	sed -i 's/SIGCLD/SIGCHLD/g' tools/usb/usbip/src/usbipd.c
 }
 do_build() {
 	cd ${wrksrc}/tools/perf
 	make ${makejobs} CC=$CC LD=$LD CFLAGS="$CFLAGS" EXTRA_CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS" \
-		WERROR=0 DESTDIR=${DESTDIR}/usr \
-		perfexecdir='lib/perf' \
+		WERROR=0 DESTDIR=${DESTDIR} prefix=/usr lib=lib/perf \
 		NO_GTK2=1 \
 		PERF_VERSION=${version}_${revision} \
 		all man
@@ -49,7 +49,7 @@ do_build() {
 		make ${makejobs}
 	esac
 
-	cd ${wrksrc}/Documentation/laptops
+	cd ${wrksrc}/tools/laptop/freefall
 	$CC ${CFLAGS} ${LDFLAGS} -o freefall freefall.c
 
 	cd ${wrksrc}/tools/usb/usbip
@@ -70,19 +70,18 @@ do_install() {
 		install install-man
 
 	# freefall
-	vbin "${wrksrc}/Documentation/laptops/freefall"
+	vbin "${wrksrc}/tools/laptop/freefall/freefall"
 
 	# perf
 	cd ${wrksrc}/tools/perf
 	make CC=$CC LD=$LD CFLAGS="$CFLAGS" EXTRA_CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS" \
-		WERROR=0 DESTDIR=${DESTDIR}/usr \
-		perfexecdir='lib/perf' \
+		WERROR=0 DESTDIR=${DESTDIR} prefix=/usr lib=lib/perf \
 		NO_GTK2=1 \
 		PERF_VERSION=${version}_${revision} \
 		install install-man
 	# move completion in new directory
 	vmkdir usr/share/bash-completion/completions
-	mv ${DESTDIR}/usr/etc/bash_completion.d/perf \
+	mv ${DESTDIR}/etc/bash_completion.d/perf \
 		${DESTDIR}/usr/share/bash-completion/completions
 
 	# usbip
@@ -95,6 +94,7 @@ do_install() {
 	if [ -d ${DESTDIR}/usr/lib64 ]; then
 		mv ${DESTDIR}/usr/lib64/* ${DESTDIR}/usr/lib/
 	fi
+	rm -f ${DESTDIR}/usr/include/cpuidle.h
 }
 
 cpupower_package() {
@@ -142,9 +142,10 @@ perf_package() {
 	pkg_install() {
 		vmove usr/bin/perf
 		vmove usr/bin/trace
-		vmove usr/lib/traceevent
+		vmove usr/lib/perf/traceevent
 		vmove usr/libexec/perf-core
 		vmove usr/share/bash-completion
+		vmove /usr/share/doc/perf-tip
 		vmove "usr/share/man/man1/perf*"
 	}
 }

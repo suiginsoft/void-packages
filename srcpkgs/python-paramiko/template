@@ -1,19 +1,19 @@
 # Template file for 'python-paramiko'
 pkgname=python-paramiko
-version=2.0.2
-revision=2
+version=2.1.1
+revision=1
 noarch=yes
 wrksrc="${pkgname/python-/}-${version}"
 build_style=python-module
 pycompile_module="paramiko"
 hostmakedepends="python-setuptools python3-setuptools"
 depends="python-cryptography python-pyasn1"
-short_desc="Python2 module that implements the SSH2 protocol"
+short_desc="Python2 SSH2 protocol library"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
-homepage="https://github.com/paramiko/paramiko"
+homepage="http://www.paramiko.org/"
 license="LGPL-2.1"
 distfiles="${PYPI_SITE}/p/paramiko/paramiko-${version}.tar.gz"
-checksum=411bf90fa22b078a923ff19ef9772c1115a0953702db93549a2848acefd141dc
+checksum=d51dada7ad0736c116f8bfe3263627925947e4a50e61436a83d58bfe7055b575
 
 python3-paramiko_package() {
 	noarch=yes

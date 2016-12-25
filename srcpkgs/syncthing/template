@@ -1,6 +1,6 @@
 # Template file for 'syncthing'
 pkgname=syncthing
-version=0.14.13
+version=0.14.16
 revision=1
 build_style=go
 go_import_path="github.com/syncthing/syncthing"
@@ -12,7 +12,7 @@ maintainer="Duncaen <duncaen@voidlinux.eu>"
 license="MPLv2"
 homepage="http://syncthing.net/"
 distfiles="https://github.com/syncthing/${pkgname}/archive/v${version}.tar.gz"
-checksum=13bce8afff0814817a0d70cdd4deddcdb2fa46494561976ad75e238a0ffbdb47
+checksum=f06a50f78faf426894ba16a63f79b11102482cbb9bb658726144e8262d363ac7
 
 pre_build() {
 	GOARCH= go run script/genassets.go gui > ./lib/auto/gui.files.go

@@ -1,7 +1,7 @@
 # Template file for 'libopenshot'
 pkgname=libopenshot
 version=0.1.2
-revision=3
+revision=4
 build_style=cmake
 only_for_archs="i686 x86_64"
 pycompile_module="openshot.py"
@@ -13,7 +13,7 @@ depends="python3"
 short_desc="Library files for the OpenShot video editor"
 maintainer="Spencer Hill <spencernh77@gmail.com>"
 license="GPL-3"
-homepage="www.openshot.org"
+homepage="http://www.openshot.org"
 distfiles="https://launchpad.net/${pkgname}/${version%.*}/${version}/+download/${pkgname}-${version}.tar.gz"
 checksum=b1fec6404ca703fdd137ed58f58b05ceecf68d9f93649b32bee7d85f868ef220
 create_wrksrc=yes

@@ -1,6 +1,6 @@
 # Template file for 'mongodb'
 pkgname=mongodb
-version=3.2.11
+version=3.4.1
 revision=1
 wrksrc="mongodb-src-r${version}"
 hostmakedepends="scons"
@@ -15,9 +15,10 @@ maintainer="Enno Boland <gottox@voidlinux.eu>"
 homepage="http://www.mongodb.org"
 license="AGPL-3"
 distfiles="http://downloads.mongodb.org/src/mongodb-src-r${version}.tar.gz"
-checksum=625eb28fd47b2af63b30343a064de7f42e5265f4c642874ec766ba3643fd80d7
+checksum=54f475e553827733fb351ee4b03b470297f0d08e0434fbf7e6661705124da97b
 # build flags broken.
 nopie=yes
+only_for_archs="aarch64 x86_64 aarch64-musl x86_64-musl"
 
 make_dirs="
  /var/lib/mongodb 0700 mongodb mongodb
@@ -27,6 +28,10 @@ make_dirs="
 nodebug=1
 
 case "${XBPS_TARGET_MACHINE}" in
+	aarch64-musl)
+		# error: conflicting types for 'wchar_t'
+		broken="https://build.voidlinux.eu/builders/aarch64-musl_builder/builds/2739/steps/shell_3/logs/stdio"
+		;;
 	x86_64*|aarch64*) makedepends+=" wiredtiger-devel";;
 esac
 
@@ -58,16 +63,16 @@ do_build() {
 		--use-system-snappy \
 		--use-system-zlib \
 		--use-system-yaml \
-		--use-system-intel_decimal128 \
 		--use-sasl-client \
 		--ssl \
 		--nostrip \
 		--disable-warnings-as-errors \
 		--allocator=system \
 		${_scons_args}
+	# --use-system-intel_decimal128 \
 }
 do_install() {
-	for b in mongos mongod mongosniff mongo mongoperf; do
+	for b in mongos mongod mongo mongoperf; do
 		vbin $b
 	done
 

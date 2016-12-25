@@ -1,6 +1,6 @@
 # Template file for 'shfmt'
 pkgname=shfmt
-version=0.5.0
+version=1.0.0
 revision=1
 build_style=go
 go_import_path="github.com/mvdan/sh"
@@ -11,7 +11,7 @@ maintainer="Michael Gehring <mg@ebfe.org>"
 license="BSD"
 homepage="https://github.com/mvdan/sh"
 distfiles="https://github.com/mvdan/sh/archive/v${version}.tar.gz"
-checksum=7718092b0a97718e4bdb47bda1f59859733ed7db0fe57aa1690a35cce9da3522
+checksum=568a88b0f1c8d80e410e5565ec0d4c5b38def1c1aace241f7299596fdfc6e146
 
 post_install() {
 	vlicense LICENSE

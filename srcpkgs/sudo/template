@@ -1,6 +1,6 @@
 # Template build file for 'sudo'.
 pkgname=sudo
-version=1.8.18p1
+version=1.8.19p1
 revision=1
 lib32disabled=yes
 build_style=gnu-configure
@@ -16,7 +16,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 homepage="http://www.gratisoft.us/sudo/"
 license="ISC, BSD, zlib"
 distfiles="http://www.courtesan.com/sudo/dist/$pkgname-$version.tar.gz"
-checksum=e5a0471c721281a693025bbde33ebd9d3db43245d83ab8516bbfc23980379434
+checksum=b8afb1cf8736b6c61f171f2bf4b174818d9e00e92ef73da55fabcd01286ffc92
 
 pre_install() {
 	find ${wrksrc} -type f -name Makefile -exec sed -i 's,$(INSTALL_OWNER),,g' {} \;
