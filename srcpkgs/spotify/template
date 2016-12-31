@@ -1,7 +1,8 @@
 # Template build file for 'spotify'.
 pkgname=spotify
-version=1.0.43
-revision=2
+reverts=1.0.45_1
+version=1.0.44
+revision=1
 short_desc="Proprietary music streaming client"
 maintainer="Stefan Mühlinghaus <jazzman@alphabreed.com>"
 homepage="https://www.spotify.com"
@@ -13,11 +14,11 @@ build_style=fetch
 depends="binutils gtk+ nss GConf libXScrnSaver xz"
 
 if [ "${XBPS_TARGET_MACHINE}" = "x86_64" ]; then
-	_sversion=".125.g376063c5-91_amd64"
-	_schecksum="7b68ede2428634b2fa1cca0bb13a73821b3a803774aa89f07b1af96622767ee2"
+	_sversion=".100.ga60c0ce1-89_amd64"
+	_schecksum="098ea8b392f9e0e9b7eccc6d8b8768d2071f8120514772c4e20580e460ffa872"
 else
-	_sversion=".123.g80176796-25_i386"
-	_schecksum="3647c6a109203f7ce9ed3dbe99a9732ef5f6044adb277985f87ffde0e8183885"
+	_sversion=".100.ga60c0ce1-29_i386"
+	_schecksum="3f88c9eedbe4d026b010a2d38a69730fc331d29b1ce3bf48409807e8bb59542b"
 fi
 
 do_install() {
