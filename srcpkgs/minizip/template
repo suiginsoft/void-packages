@@ -1,6 +1,6 @@
 # Template build file for 'minizip'.
 pkgname=minizip
-version=1.2.8
+version=1.2.10
 revision=1
 build_style=gnu-configure
 wrksrc="zlib-${version}/contrib/${pkgname}"
@@ -11,7 +11,7 @@ maintainer="ojab <ojab@ojab.ru>"
 license="zlib"
 homepage="http://www.winimage.com/zLibDll/minizip.html"
 distfiles="http://www.zlib.net/zlib-$version.tar.gz"
-checksum=36658cb768a54c1d4dec43c3116c27ed893e88b02ecfcb44f2166f9c0b7f2a0d
+checksum=8d7e9f698ce48787b6e1c67e6bff79e487303e66077e25cb9784ac8835978017
 
 pre_configure() {
 	autoreconf -i

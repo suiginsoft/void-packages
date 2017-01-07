@@ -887,8 +887,8 @@ libmusicbrainz3.so.6 libmusicbrainz-3.0.3_1
 librhythmbox-core.so.10 librhythmbox-3.4.1_1
 libdmapsharing-3.0.so.2 libdmapsharing-2.9.12_1
 libgexiv2.so.2 libgexiv2-0.6.1_1
-libraw.so.15 libraw-0.17.0_1
-libraw_r.so.15 libraw-0.17.0_1
+libraw.so.16 libraw-0.18.0_1
+libraw_r.so.16 libraw-0.18.0_1
 libdjvulibre.so.21 libdjvulibre-3.5.24_1
 libgxps.so.2 libgxps-0.2.0_1
 libt1.so.5 libt1-5.1.2_1
@@ -1019,7 +1019,7 @@ libgcr-ui-3.so.1 gcr-3.8.0_1
 libwacom.so.2 libwacom-0.3_1
 libfarstream-0.1.so.0 farstream-0.1.1_1
 libfarstream-0.2.so.5 farstream-0.2.7_1
-libass.so.5 libass-0.13.2_1
+libass.so.9 libass-0.13.6_1
 libcryptui.so.0 libcryptui-3.4.0_1
 libkeyutils.so.1 libkeyutils-1.5.5_1
 libiptcdata.so.0 libiptcdata-1.0.4_1
@@ -2041,10 +2041,10 @@ libprotobuf-c.so.1 protobuf-c-1.1.0_1
 libutf8proc.so.1 libutf8proc-1.1.6_1
 libnsutils.so.0 libnsutils-0.0.1_1
 libfilteraudio.so.0 filteraudio-git-20150416_3
-libtoxcore.so.0 toxcore-git-20150604_1
-libtoxencryptsave.so.0 toxcore-git-20150604_1
-libtoxdns.so.0 toxcore-git-20150604_1
-libtoxav.so.0 toxcore-git-20150604_1
+libtoxcore.so.0 toxcore-0.1.2_1
+libtoxdns.so.0 toxcore-0.1.2_1
+libtoxencryptsave.so.0 toxcore-0.1.2_1
+libtoxav.so.0 toxcore-0.1.2_1
 libgom-1.0.so.0 gom-0.3.0_1
 libetpan.so.20 libetpan-1.7.2_1
 libxmp.so.4 libxmp-4.3.7_1
@@ -2761,3 +2761,6 @@ libiscsi.so.8 libiscsi-1.18.0_1
 libgme.so.0 libgme-0.6.1_1
 libczmq.so.4 czmq-4.0.1_1
 liblz.so.1 lzlib-1.8_1
+libelogind.so.0 elogind-219.12_1
+libnma.so.0 libnm-gtk-1.4.0_1
+libgspell-1.so.1 gspell-1.0.0_1
