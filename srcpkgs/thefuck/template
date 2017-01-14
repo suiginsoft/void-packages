@@ -1,18 +1,20 @@
 # Template file for 'thefuck'
 pkgname=thefuck
-version=3.11
-revision=1
+version=3.14
+revision=3
 build_style=python2-module
 pycompile_module="thefuck"
 noarch=yes
-hostmakedepends="python-setuptools python-pip"
-depends="python-setuptools python-requests python-psutil python-decorator python-six python-pathlib2 python-colorama"
+hostmakedepends="python-setuptools"
+depends="python-setuptools python-requests python-psutil python-decorator
+ python-six python-pathlib2 python-colorama"
 short_desc="Magnificent app which corrects your previous console command"
 maintainer='Benjamin "Doctors" Hoffmeyer <hoffmeyer25@gmail.com>'
 license="MIT"
 homepage="https://github.com/nvbn/thefuck"
 distfiles="https://github.com/nvbn/thefuck/archive/${version}.tar.gz"
-checksum=77ee25d0da7c3b5e373c2811c3a4d625de4c635094e960b9f9c60dc490650213
+checksum=5757d7ba05ead08e867ab6b41e34d6f27fe38d5bb8af1ffc097aeed5ccc9c72f
+
 post_install() {
 	vlicense LICENSE.md
 }

@@ -9,7 +9,7 @@ hostmakedepends="automake libtool bison flex gperf ruby pkg-config qt-qmake"
 makedepends="MesaLib-devel libjpeg-turbo-devel qt-devel qt-designer-devel
  glib-devel fontconfig-devel gst-plugins-base1-devel sqlite-devel libXrender-devel"
 short_desc="Open source web browser engine (Qt4 port)"
-maintainer="Juergen Buchmueller <pullmoll@t-online.de>"
+maintainer="Jürgen Buchmüller <pullmoll@t-online.de>"
 license="LGPL-2.1, GPL-3"
 homepage="http://trac.webkit.org/wiki/QtWebKit"
 distfiles="
@@ -19,6 +19,12 @@ checksum="
  c6cfa9d068f7eb024fee3f6c24f5b8b726997f669007587f35ed4a97d40097ca
  e2882295097e47fe089f8ac741a95fef47e0a73a3f3cdf21b56990638f626ea0"
 conflicts="qt<4.8.7_12"
+
+if [ -n "$CROSS_BUILD" ]; then
+	hostmakedepends+=" qt-devel"
+	configure_args+=" -DCMAKE_SYSTEM_PROCESSOR=${CROSS_BUILD}"
+	broken="https://build.voidlinux.eu/builders/armv7l-musl_builder/builds/162/steps/shell_3/logs/stdio"
+fi
 
 post_extract() {
 	patch -p1 < ${FILESDIR}/fix-gcc6.patch
@@ -41,7 +47,7 @@ do_build() {
 	export PATH="/usr/lib/qt/bin:$PATH"
 	Tools/Scripts/build-webkit --makeargs="${makejobs}" ${opts}
 	cd ../qt-everywhere-opensource-src-${_qtver}/tools/designer/src/plugins/qwebview
-	qmake
+	qmake CC="$CC" CXX="$CXX" LINK="$CXX"
 	make ${makejobs}
 }
 
