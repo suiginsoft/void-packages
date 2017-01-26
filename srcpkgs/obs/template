@@ -1,6 +1,6 @@
 # Template file for 'obs'
 pkgname=obs
-version=17.0.0
+version=17.0.2
 revision=1
 wrksrc=obs-studio-${version}
 only_for_archs="i686 x86_64 i686-musl x86_64-musl"
@@ -14,7 +14,7 @@ maintainer="lemmi <lemmi@nerd2nerd.org>"
 license="GPL-2"
 homepage="https://obsproject.com"
 distfiles="https://github.com/jp9000/obs-studio/archive/${version}.tar.gz"
-checksum=5b7d9a6389011c74fec777667edeb1ac7d8ae7faff13f141650d295d7cd9181e
+checksum=555740290a5eefcc2788174334322ec9bd271f2255730ef947e160cde6858e09
 
 obs-devel_package() {
 	short_desc+=" - development files"

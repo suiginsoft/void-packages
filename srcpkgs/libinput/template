@@ -1,6 +1,6 @@
 # Template file for 'libinput'
 pkgname=libinput
-version=1.5.3
+version=1.6.0
 revision=1
 build_style=gnu-configure
 hostmakedepends="pkg-config"
@@ -10,10 +10,7 @@ maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="MIT"
 homepage="http://www.freedesktop.org/wiki/Software/libinput/"
 distfiles="$FREEDESKTOP_SITE/$pkgname/$pkgname-$version.tar.xz"
-checksum=91206c523b4e7aeecf296d0b94276c61bea90b9260d198c8ee3a91eced10a6e3
-
-# static_assert()
-CFLAGS="-std=c11"
+checksum=b7534f518d735c643aedca2fb4694683dfddc8d0600cfb628c87a18e65255832
 
 post_install() {
 	vlicense COPYING

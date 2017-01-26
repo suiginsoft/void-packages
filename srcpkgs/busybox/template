@@ -1,14 +1,14 @@
 # Build template for 'busybox'.
 pkgname=busybox
-version=1.25.1
-revision=2
+version=1.26.2
+revision=1
 hostmakedepends="perl"
 short_desc="The Swiss Army Knife of Embedded Linux"
 maintainer="Juan RP <xtraeme@voidlinux.eu>"
 license="GPL-2"
 homepage="http://www.busybox.net"
 distfiles="${homepage}/downloads/busybox-$version.tar.bz2"
-checksum=27667e0f2328fdbd79cfd622e4453e5c57e58f781c5da97c9be337d93aa2a02e
+checksum=da3e44913fc1a9c9b7c5337ea5292da518683cbff32be630777f565d6036af16
 
 alternatives="
  awk:awk:/usr/bin/busybox

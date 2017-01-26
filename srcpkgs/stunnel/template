@@ -1,7 +1,7 @@
 # Template file for 'stunnel'
 pkgname=stunnel
-version=5.38
-revision=1
+version=5.39
+revision=2
 build_style=gnu-configure
 configure_args="--enable-ipv6 --with-ssl=${XBPS_CROSS_BASE}/usr"
 hostmakedepends="perl"
@@ -11,7 +11,7 @@ maintainer="Toyam Cox <Vaelatern@gmail.com>"
 license="GPL-2"
 homepage="https://www.stunnel.org/"
 distfiles="https://www.stunnel.org/downloads/archive/5.x/${pkgname}-${version}.tar.gz"
-checksum=09ada29ba1683ab1fd1f31d7bed8305127a0876537e836a40cb83851da034fd5
+checksum=288c087a50465390d05508068ac76c8418a21fae7275febcc63f041ec5b04dee
 
 post_install() {
 	rm ${DESTDIR}/usr/share/man/man8/stunnel.??.8
@@ -22,12 +22,15 @@ post_install() {
 # REMARKS:
 # What. A. Pain. What a total pain.
 # Using the archive is the only way to get builds to keep working after the
-# new version is out.  LibreSSL patches for stunnel 5.35 don't yet work. Not
+# new version is out. LibreSSL patches for stunnel 5.35 don't yet work. Not
 # enough is made conditional.
 # Significant thanks to the OpenBSD project for creating patch sets for 5.37
 # One thing OpenBSD does that we don't do here is add a _stunnel user/group and
 # modify the configuration samples to chroot and use this by default.
 # As of 5.38 the signature expected for the CRYPTO_set_mem_functions seems to
 # be out of line with what libressl provides.
-# LibreSSL wants 'void (*)(void *)' but argument is of type 'void (*)(void *, const c har *, int)'
+# LibreSSL wants 'void (*)(void *)' but argument is of type 'void (*)(void *, const char *, int)'
 # This is probably not a security problem.
+# As of 5.39_2 it is patched to avoid the function call if using LibreSSL,
+# and a different call to SSL_CTX_sess_set_get_cb gets a const unsigned char
+# * instead of an unsigned char *
